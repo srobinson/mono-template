@@ -1,0 +1,31 @@
+{
+  "name": "alphap-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build:app": "react-scripts-ts build",
+    "dev": "react-scripts-ts start",
+    "eject": "react-scripts-ts eject",
+    "start:app": "react-scripts-ts start",
+    "test": "react-scripts-ts test --env=jsdom"
+  },
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 edge versions"
+    ],
+    "production": [
+      ">1%",
+      "Firefox ESR",
+      "not ie <= 11",
+      "not op_mini all"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "devDependencies": {
+    "react-scripts-ts": "3.1.0"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "@alphab/mono-template",
+  "version": "0.0.0-mono",
+  "description": "",
+  "private": true,
+  "engines": {
+    "node": "11.8.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "yarn clean && lerna bootstrap",
+    "clean": "lerna clean --yes && yarn clean:dist",
+    "clean:dist": "rimraf packages/**/dist",
+    "dev": "lerna run --parallel dev",
+    "lint": "lerna run lint",
+    "prepare": "lerna run prepare",
+    "start": "lerna run start",
+    "test": "yarn lint && NODE_ENV=test jest --runInBand --env=node --colors",
+    "test:watch": "yarn lint && NODE_ENV=test jest --runInBand --env=node --colors --watch",
+    "watch": "lerna run --parallel watch"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json"
+    ],
+    "setupFiles": [
+      "./test-shim.js",
+      "./test-setup.js"
+    ]
+  },
+  "dependencies": {
+    "emotion": "10.0.9",
+    "emotion-theming": "10.0.9",
+    "react": "16.8.4",
+    "react-dom": "16.8.4",
+    "react-emotion": "10.0.0"
+
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.11",
+    "@types/react": "16.8.8",
+    "@types/react-dom": "16.8.2",
+    "enzyme": "3.9.0",
+    "enzyme-adapter-react-16": "1.11.2",
+    "enzyme-to-json": "3.3.5",
+    "jest": "24.5.0",
+    "jest-cli": "24.5.0",
+    "lerna": "3.13.1",
+    "prettier": "1.16.4",
+    "prettier-tslint": "0.4.2",
+    "react-scripts-ts": "3.1.0",
+    "ts-jest": "24.0.0",
+    "tslint": "5.14.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-config-security": "1.15.0",
+    "typescript": "3.3.4000"
+  },
+  "sideEffects": false
+}

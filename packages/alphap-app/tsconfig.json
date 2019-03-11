@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "src",
+    "composite": false,
+    "declaration": false,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noUnusedParameters": true,
+    "outDir": "build",
+    "rootDir": "src",
+    "target": "es5"
+    },
+  "exclude": ["test", "build"],
+  "files": ["../../jest.config.js"]
+}
